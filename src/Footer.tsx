@@ -7,12 +7,14 @@ import { pageSize } from './style/mixin';
 const text = Data.data.footer.text;
 
 
+// Style
 const FooterTag = styled.footer`
   ${pageSize}
   text-align: center;
 `;
 
 
+// Component
 function Footer() {
   return (
     <FooterTag>

@@ -3,15 +3,16 @@ import Data from './data/data.json';
 import styled from 'styled-components';
 import { pageSize } from './style/mixin';
 import cssVariables from './style/variables.json';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Routing
 
 
 const variable = cssVariables.variable;
 const title = Data.data.header.title;
 const text = Data.data.header.text;
-const homeUrl = process.env.PUBLIC_URL;
+const homeUrl = process.env.PUBLIC_URL; // Routing
 
 
+// Style
 const HeaderTag = styled.header`
   ${pageSize}
   text-align: center;
@@ -26,6 +27,7 @@ const HeaderTag = styled.header`
 `;
 
 
+// Component
 function Header() {
   return (
     <HeaderTag>

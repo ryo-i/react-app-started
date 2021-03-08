@@ -9,6 +9,7 @@ import cssVariables from './style/variables.json';
 const variable = cssVariables.variable;
 
 
+// Style
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -29,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 
+// Render
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />

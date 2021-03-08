@@ -9,6 +9,7 @@ const variable = cssVariables.variable;
 const innerJson = Data.data.inner;
 
 
+// Style
 const SectionTag = styled.section`
   & h2 {
     font-size: 1.25em;
@@ -17,8 +18,8 @@ const SectionTag = styled.section`
 `;
 
 
+// Component
 function Inner() {
-
   useEffect(() => {
     hello();
   });
@@ -34,6 +35,5 @@ function Inner() {
     </div>
   );
 }
-
 
 export default Inner;

@@ -22,9 +22,11 @@
     -->
     <title>helmetで打ち替えテストだよ〜ん</title>
     <script>
+      const otherPagePath = '/react-app-started/other';
       const path = sessionStorage.getItem('path');
       console.log(path);
-      if (path && path === '/react-from-meta-lang/other') {
+
+      if (path && path === otherPagePath) {
         sessionStorage.removeItem('path');
         window.history.replaceState(null, null, './other');
       }

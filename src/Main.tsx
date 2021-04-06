@@ -25,23 +25,12 @@ const homeUrl = process.env.PUBLIC_URL; // Routing
 // Style
 const SectionTag = styled.section`
   ${pageSize}
-  section {
-    margin: 0 0 20px;
-  }
   h1 {
-    margin: 0 0 10px;
     font-size: 1.5em;
   }
   h2 {
-    margin: 0 0 5px;
     font-size: 1.25em;
     color: ${variable.baseColor};
-  }
-  p {
-    margin: 0 0 10px;
-  }
-  ul {
-    margin: 0 0 10px;
   }
 `;
 

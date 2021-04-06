@@ -26,6 +26,18 @@ const GlobalStyle = createGlobalStyle`
           opacity: 0.8;
         }
     }
+    section {
+      margin: 0 0 20px;
+    }
+    h1, h2, p, figure, ul, table {
+      margin: 0 0 10px;
+    }
+    h1, h2 {
+      line-height: 1.25;
+    }
+    p {
+      line-height: 1.75;
+    }
   }
 `;
 

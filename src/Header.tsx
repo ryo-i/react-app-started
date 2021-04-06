@@ -18,10 +18,10 @@ const HeaderTag = styled.header`
   text-align: center;
   background: ${variable.bgColor_g};
   padding: 20px;
-  & h2 {
+  h2 {
     font-size: 2em;
   }
-  & nav span {
+  nav span {
     padding-right: 0.5em;
   }
 `;
@@ -36,7 +36,7 @@ function Header() {
           <nav>
             <span>MENU:</span>
             <span><Link to={ homeUrl + "/" }>Home</Link></span>
-            <span><Link to={ homeUrl + "/other" }>Other</Link></span>
+            <span><Link to={ homeUrl + "/about" }>About</Link></span>
           </nav>
     </HeaderTag>
   );

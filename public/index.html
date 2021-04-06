@@ -22,13 +22,13 @@
     -->
     <title>React App</title>
     <script>
-      const otherPagePath = '/react-app-started/other';
+      const aboutPagePath = '/react-app-started/about';
       const path = sessionStorage.getItem('path');
       console.log(path);
 
-      if (path && path === otherPagePath) {
+      if (path && path === aboutPagePath) {
         sessionStorage.removeItem('path');
-        window.history.replaceState(null, null, './other');
+        window.history.replaceState(null, null, './about');
       }
     </script>
   </head>

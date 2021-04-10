@@ -13,12 +13,14 @@ import {
 
 
 const variable = cssVariables.variable;
-// const title = Data.data.header.title;
-// const description = Data.data.header.text;
-const mainTitle = Data.data.main.title;
-const mainText = Data.data.main.text;
-const aboutTitle = Data.data.about.title;
-const aboutText = Data.data.about.text;
+const data = Data.data;
+const mainTitle = data.main.title;
+const mainText = data.main.text;
+const aboutTitle = data.about.title;
+const aboutText = data.about.text;
+const domain = data.info.domain;
+const ogpImg = data.info.ogpImg;
+const tw = data.info.tw;
 const homeUrl = process.env.PUBLIC_URL; // Routing
 
 
@@ -42,19 +44,39 @@ function Main() {
       <SectionTag>
         <Switch>
           <Route exact path={ homeUrl + "/" }>
-            <Helmet>
-              <title>{ mainTitle }</title>
-              <meta name="description" content={ mainText } />
-            </Helmet>
+            <Helmet
+              title={ mainTitle }
+              meta={[
+                { name: 'description', content: mainText },
+                { property: 'og:title', content: mainTitle },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:url', content: domain + homeUrl + '/' },
+                { property: 'og:image', content: domain + homeUrl + '/ogp.png' },
+                { property: 'og:description', content: mainText },
+                { name: 'twitter:card', content: 'summary_large_image' },
+                { name: 'twitter:image', content: domain + homeUrl + '/ogp.png'},
+                { name: 'twitter:site', content: tw },
+              ]}
+            />
             <h1>{ mainTitle }</h1>
             <p dangerouslySetInnerHTML={{ __html: mainText }}></p>
             <Inner />
           </Route>
           <Route path={ homeUrl + "/about" }>
-            <Helmet>
-              <title>{ aboutTitle }</title>
-              <meta name="description" content={ aboutText } />
-            </Helmet>
+            <Helmet
+              title={ aboutTitle }
+              meta={[
+                { name: 'description', content: aboutText },
+                { property: 'og:title', content: aboutTitle },
+                { property: 'og:type', content: 'article' },
+                { property: 'og:url', content: domain + homeUrl + '/about' },
+                { property: 'og:image', content: domain + homeUrl + '/ogp.png' },
+                { property: 'og:description', content: aboutText },
+                { name: 'twitter:card', content: 'summary_large_image' },
+                { name: 'twitter:image', content: domain + homeUrl + '/ogp.png'},
+                { name: 'twitter:site', content: tw },
+              ]}
+            />
             <h1>{ aboutTitle }</h1>
             <p dangerouslySetInnerHTML={{ __html: aboutText }}></p>
             <About />

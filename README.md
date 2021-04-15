@@ -13,6 +13,10 @@ React + TypeScript + CSS in JS環境
 
 ※参考：[https://www.i-ryo.com/entry/2021/04/13/071820]
 
+【React】OGPはつらいよ ーSPAでの動的OGP・失敗編ー（Reactアプリスターターキット）
+
+※参考：[https://www.i-ryo.com/entry/2021/04/16/072651]
+
 ## プレビュー（GitHub Pages）
 
 ※参考：[https://ryo-i.github.io/react-app-started/]
